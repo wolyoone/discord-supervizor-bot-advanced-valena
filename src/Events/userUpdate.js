@@ -8,7 +8,7 @@ module.exports = async (oldUser, newUser) => {
         if(oldUser.username !== newUser.username) {
         if(oldUser.bot || newUser.bot) return;
         
-        const embed = new Discord.MessageEmbed().setColor("00ffee").setFooter("huh? Brita?").setTimestamp()
+        const embed = new Discord.MessageEmbed().setColor("00ffee").setFooter("huh? Wolyo?").setTimestamp()
         
         let client = oldUser.client;
         let guild = client.guilds.cache.get(ayar.guildID)
@@ -22,7 +22,7 @@ module.exports = async (oldUser, newUser) => {
         channel.send(embed.setDescription(`${member} ( \`${member.id}\` ) tagımızı (\`${conf.Tag}\`) aldığı için <@&${conf.CrewRole}> rolü verildi.`))
         } else if(!newUser.username.includes(conf.Tag) && member.roles.cache.has(conf.CrewRole)) {
         member.roles.cache.has(conf.Booster) ? await member.roles.set([conf.Register.UnregRole, conf.Booster]).catch() : await member.roles.set([conf.Register.UnregRole]).catch()
-        member.setNickname(`${conf.Ktag} İsim ' Yaş`).catch()
+        member.setNickname(`${conf.Ktag} İsim | Yaş`).catch()
         channel.send(embed.setDescription(`${member} ( \`${member.id}\` ) tagımızı (\`${conf.Tag}\`) çıkardığı için kayıtsıza atıldı.`))
         }}}
 }
