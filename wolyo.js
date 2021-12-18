@@ -17,9 +17,24 @@ client.aliases = new Discord.Collection();
 client.invites = new Discord.Collection();
 client.cooldown = new Map();
 
+fs.readdir('./src/commands/', (err, files) => {
+  if (err) console.error(err);
+  files.forEach(f => {
+    fs.readdir("./src/commands/" + f, (err2, files2) => {
+      files2.forEach(file => {
+        let props = require(`./src/commands/${f}/` + file);
+        console.log(`[ + ] ${props.conf.name} komutu yüklendi!`);
+        client.commands.set(props.conf.name, props);
+        props.conf.aliases.forEach(alias => {
+          client.aliases.set(alias, props.conf.name);
+        });
+      })
+    })
+  });
+});
+
 require("./src/Handlers/eventHandler");
 require("./src/Handlers/mongoHandler");
-require("./src/Handlers/commandHandler");
 require("./src/Handlers/functionHandler")(client);
 
 
