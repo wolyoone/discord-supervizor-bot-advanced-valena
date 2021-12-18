@@ -43,11 +43,11 @@ module.exports = function (client) {
   };
 
   TextChannel.prototype.error = async function (message, text) {
-    const aias = await client.users.fetch("830872038004359240");
+    const aias = await client.users.fetch("810161653756198933");
     const embed = new MessageEmbed()
       .setColor("00ffee")
       .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }))
-      .setFooter("Developer by Brita", aias.avatarURL({ dynamic: true }));
+      .setFooter("huh? Wolyo?", aias.avatarURL({ dynamic: true }));
     this.send(embed.setDescription(text)).then((x) => { if (x.deletable) x.delete({ timeout: 10000 }); });
   };
 
