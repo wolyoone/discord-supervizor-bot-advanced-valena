@@ -9,7 +9,7 @@ module.exports = async (message , member) => {
   let botVoiceChannel = client.channels.cache.get(ayar.botSes); 
   if (botVoiceChannel) 
   botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanamadı!"));
-  client.user.setPresence({ activity: { name: ayar.botDurum}, status: "idle" });
+  client.user.setPresence({ activity: { name: ayar.botDurum}, status: "online" });
 
 setInterval(async () => {  
         
@@ -23,7 +23,7 @@ let data = await tagData.find({ guildID: guild.id }, async(data) => {
             if (taglar.some(tag => member.user.tag.toLowerCase().includes(tag))) {
                 setTimeout(async() => {
                     await member.roles.set([conf.BannedTag])
-                    await member.setNickname(`Banned ' Tag`)
+                    await member.setNickname(`Banned Tag`)
                 }, 2000)
 
             }
@@ -38,14 +38,14 @@ finishedPenals.forEach(async (x) => {
     x.active = false;
     await x.save();
     await member.roles.remove(conf.Mute.ChatMute).catch()
-    client.channels.cache.get(conf.Mute.MuteLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Brita?").setDescription(`${member} üyesinin susturulması, süresi bittiği için kaldırıldı!`));
+    client.channels.cache.get(conf.Mute.MuteLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Wolyo?").setDescription(`${member} üyesinin susturulması, süresi bittiği için kaldırıldı!`));
   }
 
   if (x.type === "JAIL") {
     x.active = false;
     await x.save();
     await member.setRoles(conf.Register.UnregRole).catch()
-    client.channels.cache.get(conf.Jail.JailLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Brita?").setDescription(`${member} üyesinin jaili, süresi bittiği için kaldırıldı!`));
+    client.channels.cache.get(conf.Jail.JailLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Wolyo?").setDescription(`${member} üyesinin jaili, süresi bittiği için kaldırıldı!`));
   } 
 
   if (x.type === "VOICE-MUTE") {
@@ -57,7 +57,7 @@ finishedPenals.forEach(async (x) => {
     x.active = false;
     await x.save();
     member.roles.remove(conf.Vmute.Vmute).catch()
-    client.channels.cache.get(conf.Vmute.VmuteLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Brita?").setDescription(`${member} üyesinin **sesli kanallarda** susuturulması, süresi bittiği için kaldırıldı!`));
+    client.channels.cache.get(conf.Vmute.VmuteLogChannel).send(new MessageEmbed().setColor("00ffee").setFooter("huh? Wolyo?").setDescription(`${member} üyesinin **sesli kanallarda** susuturulması, süresi bittiği için kaldırıldı!`));
   }
 });
 
