@@ -1,62 +1,62 @@
 {
     "Ktag":"•",
-    "Tag":"",
+    "Tag":"★",
     
-    "Rules":"",
-    "BannedTag":"",
-    "BTagLogChannel":"",
-    "FakeAccRole":"",
-    "Booster":"",
-    "Staff":"",
-    "UstStaff":"",
+    "Rules":"915574660387729408",
+    "BannedTag":"†",
+    "BTagLogChannel":"921674818389168168",
+    "FakeAccRole":"915576631362469949",
+    "Booster":"915576508431605790",
+    "Staff":"915576498147180634",
+    "UstStaff":"915554789679587369",
 
     "Log" : {
-        "TagLogChannel":""
+        "TagLogChannel":"915969747085037679"
     },
 
     "Toplantı": {
-        "ToplantıChannel":"",
-        "Katıldı":"",
-        "İzinli":"",
-        "Gelmedi":""
+        "ToplantıChannel":"921675677411975190",
+        "Katıldı":"915576639625265203",
+        "İzinli":"921675862024286238",
+        "Gelmedi":"921675863148359710"
     },
     "Register": {
-        "BoyRoles":["","",""],
-        "GirlRoles":["","",""],
-        "RegisterHammer":"",
-        "UnregRole":"",
-        "RegisterLogChannel":"",
-        "CrewRole":"",
-        "RegisterChannel":""
+        "BoyRoles":["915576517134790696"],
+        "GirlRoles":["915576526467133501"],
+        "RegisterHammer":"915554789679587369",
+        "UnregRole":"915576527834460182",
+        "RegisterLogChannel":"921676564503081012",
+        "CrewRole":"915576516291739708",
+        "RegisterChannel":"915562106156380190"
     },
 
     "Mute": {
-        "MuteLogChannel":"",
-        "ChatMute":"",
-        "MuteHammer":""
+        "MuteLogChannel":"915969800335949834",
+        "ChatMute":"915576630162907156",
+        "MuteHammer":"915576562676563970"
     },
 
     "Vmute": {
-        "VmuteLogChannel":"",
-        "Vmute":"",
-        "VmuteHammer":""
+        "VmuteLogChannel":"915969823320723476",
+        "Vmute":"915576621858172979",
+        "VmuteHammer":"915576562676563970"
     },
 
     "Jail": {
-        "JailLogChannel":"",
-        "Jail":"",
-        "JailHammer":""
+        "JailLogChannel":"915969726151290940",
+        "Jail":"915576638459248641",
+        "JailHammer":"915576576224137227"
     },
 
     "Ban": {
-        "BanLogChannel":"",
-        "BanHammer":""
+        "BanLogChannel":"915969697428701294",
+        "BanHammer":"915576528769810453"
     },
 
     "Rol": {
-        "Lgbt":"",
-        "Couple":"",
-        "Alone":""
+        "Lgbt":"921677272342229032",
+        "Couple":"918924316849094716",
+        "Alone":"918924316853276832"
     }
     
 }
