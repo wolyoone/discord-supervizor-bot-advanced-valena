@@ -6,4 +6,4 @@ const schema = Schema({
 	names: { type: Array, default: [] },
 });
 
-module.exports = model("britaNames", schema);
+module.exports = model("wolyo-Names", schema);
