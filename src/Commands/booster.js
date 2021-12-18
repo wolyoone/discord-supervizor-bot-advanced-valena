@@ -14,7 +14,7 @@ run: async (client, message, args, embed, prefix) => {
   if(message.member.roles.cache.has(conf.Staff)) {
     message.channel.send(embed.setDescription(`Yetkili olan kişiler booster komutunu kullanamaz.`))
   }
-  if (!message.member.roles.cache.has(conf.Staff) && message.member.roles.cache.has(conf.Booster)){
+  if (!message.member.roles.cache.has(conf.Staff) && message.member.roles.cache.has(process.env.booster)){
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
       let username = args.splice(0).join(" ");
