@@ -13,7 +13,7 @@ module.exports = async member => {
             if (taglar.some(tag => member.user.tag.toLowerCase().includes(tag))) {
                 setTimeout(async() => {
                     await member.roles.set([conf.Register.UnregRole])
-                    await member.setNickname(`Banned ' Tag`)
+                    await member.setNickname(`Banned Tag`)
                 }, 2000)
 
             }
