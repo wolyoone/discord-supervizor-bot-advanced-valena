@@ -14,4 +14,4 @@ const schema = Schema({
   date: { type: Number, default: Date.now() }
 });
 
-module.exports = model("britaPenals", schema);
+module.exports = model("wolyo-Penals", schema);
