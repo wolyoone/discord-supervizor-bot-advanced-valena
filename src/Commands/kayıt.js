@@ -32,7 +32,7 @@ module.exports = {
 
     let name = args[1];
     let age = args[2];
-    if(!name || !age || isNaN(age)) return message.channel.send(embed.setDescription(`Doğru Kullanım Şekli \`${conf.prefix}kayıt @Brita/ID <İsim> <Yaş>`))       
+    if(!name || !age || isNaN(age)) return message.channel.send(embed.setDescription(`Doğru Kullanım Şekli \`${conf.prefix}kayıt @Wolyo/ID <İsim> <Yaş>`))       
     if(13 >= age) return message.channel.send(embed.setDescription(`13 yaş ve altını kayıt edemezsin.`))
 
     let Belirlenenİsim;
@@ -53,7 +53,7 @@ module.exports = {
 
     let embed2 = new MessageEmbed()
     .setColor("00ffee")
-    .setFooter(`huh? Brita?`)
+    .setFooter(`huh? Wolyo?`)
     .setThumbnail(message.guild.iconURL({dynamic: true}))
     .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }))
     .setDescription(`
@@ -73,7 +73,7 @@ module.exports = {
         member.user.username.includes(conf.Tag) && !member.roles.cache.has(conf.Register.CrewRole) ? 
         await member.roles.add(conf.Register.CrewRole , conf.Register.BoyRoles) : member.roles.add(conf.Register.BoyRoles)
         await button.think(true)
-        await button.reply.edit(`${member} adlı kullanıcı başarıyla ${conf.Register.BoyRoles.map(r => `<@&${r}>`)} rolüyle kayıt edildi`)
+        await button.reply.edit(`${member} adlı kullanıcı başarıyla ${conf.Register.BoyRoles.map(r => `<@&${r}>`)} rolleri verilerek kayıt edildi`)
         await datas.findOneAndUpdate({ guildID: message.guild.id, userID: member.user.id }, { $push: { names: { name: Belirlenenİsim, Gender: "ERKEK", rol: conf.Register.BoyRoles.map(x => `<@&${x}>`).join(" , "), yetkili: message.author.id,  date: Date.now() } } }, { upsert: true });  
         await kayıt.findByIdAndUpdate(member.id, { $push: { kayıt: [{ isim: Belirlenenİsim, yetkili: message.author.id, rol: conf.Register.BoyRoles.map(x => `<@&${x}>`).join(" , "), tarih: Date.now() }] } }, { upsert: true });
     
@@ -83,7 +83,7 @@ module.exports = {
         member.user.username.includes(conf.Tag) && !member.roles.cache.has(conf.Register.CrewRole) ? 
         await member.roles.add(conf.Register.CrewRole , conf.Register.BoyRoles) : member.roles.add(conf.Register.GirlRoles)
         await button.think(true)
-        await button.reply.edit(`${member} adlı kullanıcı başarıyla ${conf.Register.GirlRoles.map(r => `<@&${r}>`)} rolüyle kayıt edildi`)
+        await button.reply.edit(`${member} adlı kullanıcı başarıyla ${conf.Register.GirlRoles.map(r => `<@&${r}>`)} rolleri verilerek kayıt edildi`)
         await datas.findOneAndUpdate({ guildID: message.guild.id, userID: member.user.id }, { $push: { names: { name: Belirlenenİsim, Gender: "KADIN", rol: conf.Register.GirlRoles.map(x => `<@&${x}>`).join(" , "), yetkili: message.author.id,  date: Date.now() } } }, { upsert: true });  
         await kayıt.findByIdAndUpdate(member.id, { $push: { kayıt: [{ isim: Belirlenenİsim, yetkili: message.author.id, rol: conf.Register.GirlRoles.map(x => `<@&${x}>`).join(" , "), tarih: Date.now() }] } }, { upsert: true });
     
