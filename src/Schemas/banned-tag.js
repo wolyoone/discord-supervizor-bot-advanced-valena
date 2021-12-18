@@ -9,4 +9,4 @@ const schema = Schema({
   date:  { type: Number, default: Date.now() }
 });
 
-module.exports = model("britaBannedTag", schema);
+module.exports = model("Wolyo-BannedTag", schema);
