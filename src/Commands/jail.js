@@ -29,7 +29,7 @@ module.exports = {
 
     const duration = args[1] ? ms(args[1]) : undefined;
     const reason = args.slice(2).join(" ") || "Belirtilmedi!";
-    if(!duration || !reason) { return message.channel.send(embed.setDescription(`Hatalı kullanım. \`${ayar.prefix}jail @Brita/ID <Süre> <Sebep>\` `)) }
+    if(!duration || !reason) { return message.channel.send(embed.setDescription(`Hatalı kullanım. \`${ayar.prefix}jail @Wolyo/ID <Süre> <Sebep>\` `)) }
 
     await ceza.findOneAndUpdate({ guildID: message.guild.id , userID: member.user.id} , {$push: {ceza : 1}}, {upsert: true})
 
