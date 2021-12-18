@@ -29,7 +29,7 @@ module.exports = {
 
   const duration = args[1] ? ms(args[1]) : undefined;
   const reason = args.slice(2).join(" ") || "Belirtilmedi!";
-  if(!reason || !duration) return message.channel.send(embed.setDescription(`Hatalı kullanım. ${ayar.prefix}vmute @Brita/ID <Süre> <Sebep>`))
+  if(!reason || !duration) return message.channel.send(embed.setDescription(`Hatalı kullanım. ${ayar.prefix}vmute @Wolyo/ID <Süre> <Sebep>`))
 
   await ceza.findOneAndUpdate({ guildID: message.guild.id, userID: member.user.id }, { $push: { ceza: 1 } }, { upsert: true });
 
