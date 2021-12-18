@@ -22,7 +22,7 @@ if(data) {
     let tags = data.map(x => x.Tag)
     if(tags.some(tag => newUser.username.includes(tag)) && (!member.roles.cache.has(conf.BannedTag))) {
     member.setRoles([conf.BannedTag]).catch()
-    member.setNickname(`Banned ' Tag`).catch()
+    member.setNickname(`Banned Tag`).catch()
     channel.send(embed.setDescription(`${member} ( \`${member.id}\` ) yasaklı tagımızı aldığı için <@&${conf.BannedTag}> rolü verildi.`))
     } else if (uye.roles.cache.has(conf.BannedTag)) {
     member.roles.cache.has(conf.Booster) ? await member.roles.set([conf.Register.UnregRole, conf.Booster]).catch() : await member.roles.set([conf.Register.UnregRole]).catch()
