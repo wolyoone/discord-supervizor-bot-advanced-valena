@@ -15,7 +15,7 @@ module.exports = async (message) => {
   let args = message.content.substring(prefix.length).trim().split(" ");
   let commandName = args[0].toLowerCase();
 
-  const embed = new MessageEmbed().setColor("00ffee").setFooter(`huh? Brita?`).setThumbnail(message.guild.iconURL({dynamic: true})).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }));
+  const embed = new MessageEmbed().setColor("00ffee").setFooter(`huh? Wolyo?`).setThumbnail(message.guild.iconURL({dynamic: true})).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, size: 2048 }));
 
   args = args.splice(1);
   let cmd = client.commands.has(commandName) ? client.commands.get(commandName) : client.commands.get(client.aliases.get(commandName));
