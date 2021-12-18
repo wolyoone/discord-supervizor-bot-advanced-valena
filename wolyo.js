@@ -74,6 +74,6 @@ Date.prototype.toTurkishFormatDate = function (format) {
   return format;
 };
 
-client.login(settings.token)
-.then(() => console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] [Brita-Moderation] Bot connected!`))
+client.login(process.env.token)
+.then(() => console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] [Wolyo-Moderation] Bot connected!`))
 .catch(() => console.log("[BOT] Bot can't connected!"));
