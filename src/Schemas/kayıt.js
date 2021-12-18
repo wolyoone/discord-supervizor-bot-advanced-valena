@@ -12,4 +12,4 @@ const schema = Schema({
     teyitler: Array
 });
 
-module.exports = model("britaRegister", schema);
+module.exports = model("wolyo-Register", schema);
