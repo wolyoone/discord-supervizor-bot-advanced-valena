@@ -7,4 +7,4 @@ const schema = Schema({
   ceza: { type: Array, default: [] }
 });
 
-module.exports = model("britaCeza", schema);
+module.exports = model("wolyo-Ceza", schema);
