@@ -10,6 +10,6 @@ module.exports = {
   },
 
   run: async (client, message, args) => {
-    if(message.author.id !== "830872038004359240") return;
-    message.channel.send(`\`${client.ws.ping}\` ms`)
+    if(message.author.id !== "810161653756198933") return;
+    message.channel.send(`Pingim \`${client.ws.ping}\``)
 }}
