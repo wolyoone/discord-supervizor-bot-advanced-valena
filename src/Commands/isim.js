@@ -14,7 +14,7 @@ run: async (client, message, args, embed, prefix) => {
     //return message.channel.send(embed.setDescription(`Bu komutu kullanmak için \`${message.guild.roles.cache.find(x => x.id === conf.Register.RegisterHammer).name}\` yetkisine sahip olman lazım`))
     
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-    if(!member) return message.channel.send(embed.setDescription(`Hatalı , kullanıcı belirtmeyi unuttun. Doğru kullanım \`${ayar.prefix}isim @Brita/ID <Nick>\``))
+    if(!member) return message.channel.send(embed.setDescription(`Hatalı , kullanıcı belirtmeyi unuttun. Doğru kullanım \`${ayar.prefix}isim @Wolyo/ID <Nick>\``))
 
     let name = args[1];
     let age = args[2];
@@ -29,6 +29,6 @@ run: async (client, message, args, embed, prefix) => {
     member.setNickname(Belirlenenİsim)
     return message.channel.send(embed.setDescription(`
     ${member} kullanıcısının ismi başarıyla \`${Belirlenenİsim}\` olarak değiştirildi.
-    Kullanıcının önceki isimlerini görmek için \`${ayar.prefix}isimler @Brita/ID\` komutunu kullanmanız yeterlidir.`))
+    Kullanıcının önceki isimlerini görmek için \`${ayar.prefix}isimler @Wolyo/ID\` komutunu kullanmanız yeterlidir.`))
 
 }}
