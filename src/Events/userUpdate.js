@@ -1,6 +1,6 @@
-const conf = require("../Configs/config.json");
-const ayar = require("../Configs/settings.json")
-const emoji = require("../Configs/emoji.json")
+const conf = require("../configs/config.json");
+const ayar = require("../configs/settings.json")
+const emoji = require("../configs/emoji.json")
 const Discord = require("discord.js")
 
 module.exports = async (oldUser, newUser) => {
