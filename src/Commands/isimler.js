@@ -17,7 +17,7 @@ module.exports = {
     // return message.channel.send(embed.setDescription(`Bu komutu kullanmak için \`${message.guild.roles.cache.find(x => x.id === conf.Register.RegisterHammer).name}\` yetkisine sahip olman lazım`))
 
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-    if(!member) return message.channel.send(embed.setDescription(`Hangi kullanıcının isim geçmişine bakacağını belirtmelisin \`${ayar.prefix}isimler @Brita/ID\``))
+    if(!member) return message.channel.send(embed.setDescription(`Hangi kullanıcının isim geçmişine bakacağını belirtmelisin \`${ayar.prefix}isimler @Wolyo/ID\``))
 
     let isimsorgu = await datas.findOne({guildID: message.guild.id, userID: member.user.id})
     if(!isimsorgu) { return message.channel.send(embed.setDescription(`Belirttiğin kullanıcının her hangi bir isim geçmişi bulunmuyor.`))}
