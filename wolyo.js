@@ -5,8 +5,8 @@ const client = (global.client = new Client());
 const MessageButton = require('discord-buttons');
 MessageButton(client);
 const settings = require("./src/configs/settings.json");
-const config = require("./src/Configs/config.json")
-const emoji = require("./src/Configs/emoji.json")
+const config = require("./src/configs/config.json")
+const emoji = require("./src/configs/emoji.json")
 const moment = require('moment');
 require('moment-duration-format')
 const fs = require("fs");
