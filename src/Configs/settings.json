@@ -1,12 +1,12 @@
 {
     "token": "",
-    "prefix": [""],
-    "guildID": "",
-    "botPrefix": "",
-    "botOwner": "830872038004359240",
-    "mongoUrl": "",
-    "owners": [],
-    "botSes": "",
-    "botDurum": "huh ? Brita"
+    "prefix": ["."],
+    "guildID": "915554557461950475",
+    "botPrefix": ".",
+    "botOwner": "810161653756198933",
+    "mongoUrl": "mongodb+srv://wolyomongodb:wolyomongodb@wolyomongodb.ags2x.mongodb.net/wolyomongodb?retryWrites=true&w=majority",
+    "owners": ["810161653756198933"],
+    "botSes": "915576192919298100",
+    "botDurum": "huh? Wolyo?"
   }
   
