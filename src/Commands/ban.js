@@ -29,7 +29,7 @@ module.exports = {
     if(ban) { return message.channel.send(embed.setDescription(`Belirtilen üye zaten banlı.`)) }
 
     const reason = args.slice(2).join(" ") || "Belirtilmedi!";
-    if(!reason) { return message.channel.send(embed.setDescription(`Hatalı kullanım. \`${ayar.prefix}Ban @Brita/ID <Süre> <Sebep>\` `)) }
+    if(!reason) { return message.channel.send(embed.setDescription(`Hatalı kullanım. \`${ayar.prefix}Ban @Wolyo/ID <Süre> <Sebep>\` `)) }
 
     await ceza.findOneAndUpdate({ guildID: message.guild.id , userID: member.user.id} , {$push: {ceza : 1}}, {upsert: true})
 
