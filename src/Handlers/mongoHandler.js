@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const settings = require("../Configs/settings.json");
+const settings = require("../configs/settings.json");
 
 mongoose.connect(settings.mongoUrl, {
   useUnifiedTopology: true,
