@@ -1,4 +1,5 @@
 const { Client, MessageEmbed , message } = require("discord.js");
+const keep_alive = require('./keep_alive.js')
 const Discord = require("discord.js")
 require('discord-reply');
 const client = (global.client = new Client());
