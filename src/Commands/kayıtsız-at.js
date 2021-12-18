@@ -22,7 +22,7 @@ module.exports = {
     if(message.member.roles.highest.positon = member.roles.highest.positon) { return message.channel.send(embed.setDescription(`Kendinden aynı yetkideki kişileri kayıtsıza atamazsın.`)) }
 
     member.roles.cache.has(conf.Booster) ? member.roles.set([conf.Booster, conf.Register.UnregRole]).catch() : member.roles.set([conf.Register.UnregRole]).catch()
-    member.setNickname(`${conf.Ktag} İsim ' Yaş`)
+    member.setNickname(`${conf.Ktag} İsim | Yaş`)
     if(member.voice.channel) member.voice.kick()
 
     message.channel.send(embed.setDescription(`${member} isimli kullanıcı <@${message.author.id}> isimli yetkili tarafından kayıtsıza atıldı.`))
